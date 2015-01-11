@@ -1,0 +1,6 @@
+loadStyleSheet(screen,generic) // load the generic stylesheet
+setContent(screen,divone,"div one")
+setDiv(screen,divone,"draggable")
+setDiv(screen,divone,"bind:mouseleave:mouseenter")
+setContent(screen,divthree,"div three s : <input id="searchkey" name=\"searchkey\"> ")
+setDiv(screen,searchkey,"bind:submit:change")

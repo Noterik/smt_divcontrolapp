@@ -1,0 +1,99 @@
+body {
+	background-color:#AAAAFF;
+	-webkit-background-size: 1024px 768px;
+	-moz-background-size: 1024px 768px;
+	-o-background-size: 1024px 768px;
+	background-size: 1024px 768px;
+}
+
+
+table,
+td,
+th {
+  border: solid 1px silver;
+  color:#666;
+  padding:5px;
+  font-size:12pt;
+  text-align: center;
+  }
+table {
+  border-collapse:collapse;
+  }
+table tr {
+  background-color:#eee;
+  }
+
+table td, table th{
+    border:1px solid #fff;
+    }
+    
+ th {
+  background-color:#336;
+  color:#fff;
+  }
+
+
+
+
+
+#divone {
+	color: #5588aa;
+	text-align: center;
+	font-style: bold;
+	background-color: #cccccc;
+	position:absolute;
+	left : 100px;
+	width : 100px;
+	height : 100px;
+	border:1px solid #dddddd;
+}
+
+#divtwo {
+	color: #8855aa;
+	text-align: center;
+	font-style: bold;
+	background-color: #cccccc;
+	position:absolute;
+	left : 300px;
+	width : 100px;
+	height : 100px;
+	border:1px solid #dddddd;
+}
+
+#divthree {
+	color: #8855aa;
+	text-align: center;
+	font-style: bold;
+	background-color: #cccccc;
+	position:absolute;
+	left : 300px;
+	top : 200px;
+	height : 100px;
+	border:1px solid #dddddd;
+}
+
+#notification {
+	background-color:#000000;
+	border: 2px solid #dddddd;
+	border-radius: 10px;
+	color: #ffffff;
+	padding: 4px 10px 1px 10px;
+	font-size : 18px;
+	font-style : bold;
+	position:absolute;
+	height:30px;
+	top: -40px;
+	right: 30px;
+	opacity: 0.8;
+}
+
+#login {
+        background-color: #333333;
+        color: #aaaaaa;
+        position:absolute;
+        right:0px;
+        top:0px;
+        padding: 3px;
+        border:1px solid #888888;
+	opacity: 0.9;
+}

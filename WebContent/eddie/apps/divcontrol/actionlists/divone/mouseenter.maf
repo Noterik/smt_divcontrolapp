@@ -1,0 +1,1 @@
+log(mouseenter $clientX $clientY $screenX $screenY)

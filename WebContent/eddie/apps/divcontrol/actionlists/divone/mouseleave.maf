@@ -1,0 +1,4 @@
+log(mouseleave $clientX $clientY $screenX $screenY)
+setContent(screen,divtwo,"two !")
+setDiv(screen,divtwo,"draggable")
+setDiv(screen,divtwo,"bind:mouseenter")
