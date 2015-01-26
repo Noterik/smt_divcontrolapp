@@ -20,7 +20,10 @@
 * along with Helloworld app.  If not, see <http://www.gnu.org/licenses/>.
 */
 package org.springfield.lou.application.types;
+import java.util.Iterator;
+
 import org.springfield.fs.FSList;
+import org.springfield.fs.FsNode;
 import org.springfield.lou.application.*;
 import org.springfield.lou.screen.*;
 import org.springfield.mojo.interfaces.ServiceInterface;
@@ -38,10 +41,29 @@ public class DivcontrolApplication extends Html5Application {
 		
 		
 		ServiceInterface albright = ServiceManager.getService("albright");
-		System.out.println("HTML5 ALBRIGHT="+albright);
+		System.out.println("HTML5 ALBRIGHT2="+albright);
 		String result = albright.get("/domain/euscreenxl/user/luce/video/123455/ep_images/",null,"text/xml");
 		
-		//FSList nodes = new FSList.parseNodes(result);
+		result ="<fsxml>";
+		result +="<ep_images id=\"1\">";
+		result +="<properties>";
+		result +="<title>bla die bla</title>";
+		result +="</properties>";
+		result +="</ep_images>";	
+		result +="<ep_images id=\"2\">";
+		result +="<properties>";
+		result +="<title>bla die bla2</title>";
+		result +="</properties>";
+		result +="</ep_images>";
+		result +="</fsxml>";	
+		FSList nodes = new FSList().parseNodes(result);
+		System.out.println("NDOE SIZE DIVCODE="+nodes.size());
+		
+		for(Iterator<FsNode> iter = nodes.getNodes().iterator() ; iter.hasNext(); ) {
+			FsNode n = (FsNode)iter.next();	
+	 			System.out.println("TITLE="+n.getProperty("title"));
+	 			System.out.println("ID="+n.getId());
+		}
 		
 		// do something fun with the nodes, like load them in a div file 
 		String body = result;
