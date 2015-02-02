@@ -1,0 +1,2 @@
+log(searchkey/change $searchkey.value)
+callServer(searchdone,screen,content)

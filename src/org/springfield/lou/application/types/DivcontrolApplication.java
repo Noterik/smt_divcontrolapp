@@ -36,9 +36,12 @@ public class DivcontrolApplication extends Html5Application {
 
 	}
  	
-	public void testeuropeana(Screen s,String id) {
-		System.out.println("TEST ALBRIGHT CALL3");	
-		
+	public void searchdone(Screen s,String content) {
+		contentToProperties(s,content);
+		s.setContent("divone",(String)s.getProperty("searchkey.value"));
+	}
+ 	
+	public void testeuropeana(Screen s,String id) {		
 		
 		ServiceInterface albright = ServiceManager.getService("albright");
 		System.out.println("HTML5 ALBRIGHT2="+albright);
@@ -68,7 +71,15 @@ public class DivcontrolApplication extends Html5Application {
 		// do something fun with the nodes, like load them in a div file 
 		String body = result;
 		setContent("divthree", body);
-		
-
 	}
+	
+	public void contentToProperties(Screen s,String content) {
+		String[] cmd=content.split(",");
+		for (int i=0;i<cmd.length;i++) {
+			String[] param = cmd[i].split("=");
+			s.setProperty(param[0],param[1]);
+		}
+		
+	}
+	
 }
